@@ -41,15 +41,6 @@ module "eks" {
   subnet_ids        = [aws_subnet.public_a.id, aws_subnet.public_b.id]
   vpc_id          = aws_vpc.main.id
 
-  eks_managed_node_groups = {
-    eks_nodes = {
-      desired_capacity = var.node_desired_capacity
-      max_capacity     = var.node_max_capacity
-      min_capacity     = var.node_min_capacity
-      instance_type    = var.node_instance_type
-      key_name         = var.key_name
-    }
-  }
 }
 
 resource "aws_db_instance" "mydb" {

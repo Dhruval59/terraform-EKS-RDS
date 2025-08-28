@@ -81,7 +81,7 @@ variable "node_instance_type" {
 variable "key_name" {
   description = "EC2 Key pair for EKS worker nodes"
   type        = string
-  default     = "my-key-pair"  # Replace with your actual key pair name
+  default     = "key"
 }
 
 variable "db_allocated_storage" {
@@ -124,7 +124,6 @@ variable "db_username" {
 variable "db_password" {
   description = "Password for the RDS database"
   type        = string
-  default     = "password"  # Replace with a strong password
 }
 
 variable "db_publicly_accessible" {
